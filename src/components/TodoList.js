@@ -9,7 +9,7 @@ const TodoList = () => {
       <ul className="todo-list">
         {
           list.map( object => (
-            <TaskTemplate task={object} />
+            <TaskTemplate key={object.id} task={object} />
           ))
         }
       </ul>

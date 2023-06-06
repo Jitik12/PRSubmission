@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React,{ useContext } from 'react';
 import './App.css';
+//Importing Components
+import Form from './components/Form';
+import TodoList from './components/TodoList';
+//Importing Context
+import {List} from './context/ListContext';
 
 function App() {
+  const { input, setInput, list, setList } = useContext(List);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Hello Bitch { input }</h1>
       </header>
+      <Form />
+      <TodoList />
     </div>
   );
 }

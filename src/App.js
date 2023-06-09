@@ -7,7 +7,7 @@ import TodoList from './components/TodoList';
 import {List} from './context/ListContext';
 
 function App() {
-  const { input, setInput, list, setList } = useContext(List);
+  const { input } = useContext(List);
   return (
     <div className="App">
       <header>

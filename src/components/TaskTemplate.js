@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { List } from "../context/ListContext";
-import clsx from "clsx";
 
 const TaskTemplate = ({ task }) => {
-  const { input, setInput, list, setList } = useContext(List);
+  const { list, setList } = useContext(List);
 
   const doMe = (e) => {
     e.preventDefault();
